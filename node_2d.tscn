@@ -1,19 +1,14 @@
 [gd_scene format=3 uid="uid://c2l6jawkji20o"]
 
-[ext_resource type="Texture2D" uid="uid://cv0s23282pfe8" path="res://assets/sprites/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Attack01.png" id="1_wtcfe"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0rilt"]
-atlas = ExtResource("1_wtcfe")
-region = Rect2(0, 0, 99, 104.5)
+[ext_resource type="Texture2D" uid="uid://hefgj66exqr8" path="res://assets/sprites/MainCharacter/idle/sprite sheets/idle.png" id="1_wtcfe"]
 
 [node name="Node2D" type="Node2D" unique_id=394071561]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2023118561]
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=747141427]
-position = Vector2(0, 1)
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=176292863]
-position = Vector2(-4.000004, 2.0000007)
-scale = Vector2(4.375, 4.3774037)
-texture = SubResource("AtlasTexture_0rilt")
+position = Vector2(2.9999962, 3)
+scale = Vector2(2.7625, 2.4250655)
+texture = ExtResource("1_wtcfe")
+region_enabled = true
+region_rect = Rect2(0, 0, 40, 55)
