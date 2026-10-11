@@ -1,5 +1,5 @@
-Assets por parte de Zerie y merakintsugi
-URL: https://zerie.itch.io/tiny-rpg-character-asset-pack y https://zerie.itch.io/tiny-rpg-character-asset-pack-02 y https://merakintsugi.itch.io/platformer-character-pack
+Assets por parte de Zerie 
+URL: https://zerie.itch.io/tiny-rpg-character-asset-pack y https://zerie.itch.io/tiny-rpg-character-asset-pack-02
 Origen: itch io 
 Tipo de licencia: 
  License:
