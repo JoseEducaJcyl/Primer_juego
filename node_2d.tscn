@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://c2l6jawkji20o"]
 
-[ext_resource type="Texture2D" uid="uid://hefgj66exqr8" path="res://assets/sprites/MainCharacter/idle/sprite sheets/idle.png" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://crqoaf75rv18c" path="res://scripts/movimiento2.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://kosxrqw0646u" path="res://assets/sprites/Characters(100x100 split)/Soldier/Soldier/Soldier.png" id="2_soldier"]
 
 [node name="Node2D" type="Node2D" unique_id=394071561]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2023118561]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=176292863]
-position = Vector2(2.9999962, 3)
-scale = Vector2(2.7625, 2.4250655)
-texture = ExtResource("1_wtcfe")
+position = Vector2(1, -2)
+scale = Vector2(4.588146, 4.3068724)
+texture = ExtResource("2_soldier")
 region_enabled = true
-region_rect = Rect2(0, 0, 40, 55)
+region_rect = Rect2(19.799484, 22.225403, 58.181984, 53.97606)
+script = ExtResource("1_wtcfe")
