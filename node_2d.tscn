@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2l6jawkji20o"]
 
-[ext_resource type="Script" uid="uid://crqoaf75rv18c" path="res://scripts/movimiento2.gd" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://nqmfxahhwvf6" path="res://scripts/boton.gd" id="2_0e48y"]
 [ext_resource type="Texture2D" uid="uid://kosxrqw0646u" path="res://assets/sprites/Characters(100x100 split)/Soldier/Soldier/Soldier.png" id="2_soldier"]
 
 [node name="Node2D" type="Node2D" unique_id=394071561]
@@ -13,4 +13,15 @@ scale = Vector2(4.588146, 4.3068724)
 texture = ExtResource("2_soldier")
 region_enabled = true
 region_rect = Rect2(19.799484, 22.225403, 58.181984, 53.97606)
-script = ExtResource("1_wtcfe")
+script = ExtResource("2_0e48y")
+
+[node name="Timer" type="Timer" parent="Sprite2D" unique_id=1533695455]
+autostart = true
+
+[node name="Button" type="Button" parent="." unique_id=586347763]
+offset_left = -321.0
+offset_top = -155.0
+offset_right = -160.0
+offset_bottom = -58.0
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]
