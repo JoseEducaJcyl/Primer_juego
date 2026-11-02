@@ -1,27 +1,27 @@
 [gd_scene format=3 uid="uid://c2l6jawkji20o"]
 
 [ext_resource type="Script" uid="uid://nqmfxahhwvf6" path="res://scripts/boton.gd" id="2_0e48y"]
-[ext_resource type="Texture2D" uid="uid://kosxrqw0646u" path="res://assets/sprites/Characters(100x100 split)/Soldier/Soldier/Soldier.png" id="2_soldier"]
+[ext_resource type="Texture2D" uid="uid://bvcrjhrnjvy50" path="res://assets/icons/icon.svg" id="2_0hol4"]
 
 [node name="Node2D" type="Node2D" unique_id=394071561]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2023118561]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=176292863]
-position = Vector2(1, -2)
-scale = Vector2(4.588146, 4.3068724)
-texture = ExtResource("2_soldier")
+position = Vector2(0, -3)
+scale = Vector2(1.121656, 1.089222)
+texture = ExtResource("2_0hol4")
 region_enabled = true
-region_rect = Rect2(19.799484, 22.225403, 58.181984, 53.97606)
+region_rect = Rect2(-1.157196, 0.9638157, 130.69919, 126.843765)
 script = ExtResource("2_0e48y")
 
 [node name="Timer" type="Timer" parent="Sprite2D" unique_id=1533695455]
 autostart = true
 
 [node name="Button" type="Button" parent="." unique_id=586347763]
-offset_left = -321.0
-offset_top = -155.0
-offset_right = -160.0
-offset_bottom = -58.0
+offset_left = 411.0
+offset_top = -325.0
+offset_right = 572.0
+offset_bottom = -228.0
 
 [connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]

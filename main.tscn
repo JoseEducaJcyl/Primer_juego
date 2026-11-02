@@ -1,5 +1,44 @@
 [gd_scene format=3 uid="uid://bok5dmf3xipnt"]
 
-[node name="Main" type="Node2D" unique_id=831059046]
+[ext_resource type="Script" uid="uid://dwxr3jgf07ygk" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://c5i0dxv4l4baq" path="res://player/player.gd" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://kosxrqw0646u" path="res://assets/sprites/Characters(100x100 split)/Soldier/Soldier/Soldier.png" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://cnl2rcwu8febt" path="res://assets/sprites/Characters(100x100 split)/Orc/Orc with shadows/Orc.png" id="4_272bh"]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1925861875]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57w8f"]
+
+[node name="Main" type="Node2D" unique_id=1744046969]
+position = Vector2(73, 87)
+script = ExtResource("1_1bvp3")
+
+[node name="Player" type="Area2D" parent="." unique_id=978285508]
+collision_mask = 0
+script = ExtResource("2_lquwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1689331750]
+texture = ExtResource("3_7mycd")
+region_enabled = true
+region_rect = Rect2(27.711792, 29.532715, 45.01544, 40.72824)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1280397801]
+shape = SubResource("RectangleShape2D_57w8f")
+
+[node name="Target" type="Sprite2D" parent="." unique_id=1586273922]
+position = Vector2(-45, 0)
+texture = ExtResource("4_272bh")
+region_enabled = true
+region_rect = Rect2(24.785278, 26.75418, 53.589783, 47.158997)
+
+[node name="StatusLabel" type="Label" parent="." unique_id=847143501]
+offset_left = -68.0
+offset_top = -64.0
+offset_right = -28.0
+offset_bottom = -41.0
+metadata/_edit_use_anchors_ = true
+
+[node name="RoundTimer" type="Timer" parent="." unique_id=311559335]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="interact_requested" from="Player" to="." method="_on_player_interact_requested"]
+[connection signal="timeout" from="RoundTimer" to="." method="_on_round_timer_timeout"]
